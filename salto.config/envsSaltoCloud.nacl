@@ -1,4 +1,8 @@
 envs {
   envs = [
+    {
+      uuid = "879305dc-3d53-4e33-8088-057fba3913fc"
+      folderName = "env with spaces"
+    },
   ]
 }

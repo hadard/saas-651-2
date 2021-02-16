@@ -1,0 +1,5 @@
+salesforce.EmployeeUserSettings {
+  fullName = "EmployeeUser"
+  enableEmployeeAutoCreateUser = "false"
+  enableEmployeeIsSourceOfTruth = "false"
+}

@@ -1,0 +1,47 @@
+type salesforce.CustomTest2__c {
+  salesforce.FormulaNumber formula__c {
+    apiName = "CustomTest2__c.formula__c"
+    label = "formula"
+    _required = false
+    precision = 18
+    scale = 2
+    formula = '''
+1 + 4 +6
++6
++7
+'''
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+  }
+  salesforce.Picklist picklist__c {
+    apiName = "CustomTest2__c.picklist__c"
+    label = "picklist"
+    _required = false
+    valueSet = [
+      {
+        fullName = "f1"
+        default = false
+        label = "f1"
+      },
+      {
+        fullName = "f2"
+        default = false
+        label = "f2"
+      },
+      {
+        fullName = "f3"
+        default = false
+        label = "f3"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    sorted = false
+  }
+}

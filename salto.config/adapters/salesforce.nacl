@@ -1,0 +1,20 @@
+salesforce {
+  metadataTypesSkippedList = [
+    "Report",
+    "ReportType",
+    "ReportFolder",
+    "Dashboard",
+    "DashboardFolder",
+    "Profile",
+    "PermissionSet",
+    "SiteDotCom",
+    "CustomObjectTranslation",
+  ]
+  instancesRegexSkippedList = [
+    "^EmailTemplate.Marketo",
+    "^StandardValueSet.AddressCountryCode",
+    "^StandardValueSet.AddressStateCode",
+    "^.+\\.(?!standard_)[^_]+__(?!(c|r|ka|kav|Feed|ViewStat|VoteStat|DataCategorySelection|x|xo|mdt|Share|Tag|History|pc|pr|hd|hqr|hst|b|latitude__s|longitude__s|e|p|ChangeEvent|chn)([^a-zA-Z\\d_]+|$)).+$",
+  ]
+  maxItemsInRetrieveRequest = 2500
+}

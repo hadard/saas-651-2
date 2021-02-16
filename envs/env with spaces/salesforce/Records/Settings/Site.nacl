@@ -1,0 +1,7 @@
+salesforce.SiteSettings {
+  fullName = "Site"
+  enableProxyLoginICHeader = true
+  enableSitesRecordReassignOrgPref = true
+  enableTopicsInSites = false
+  enableVisualforceApiAccessAllowed = false
+}

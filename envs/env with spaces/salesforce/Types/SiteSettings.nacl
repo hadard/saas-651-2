@@ -1,0 +1,36 @@
+settings salesforce.SiteSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  boolean enableVisualforceApiAccessAllowed {
+    _required = false
+  }
+  serviceid fullName {
+    _required = false
+  }
+  string internalId {
+    _required = false
+    _hidden_value = true
+    localOnly = true
+  }
+  boolean enableProxyLoginICHeader {
+  }
+  boolean enableSitesRecordReassignOrgPref {
+  }
+  boolean enableTopicsInSites {
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "SiteSettings"
+}

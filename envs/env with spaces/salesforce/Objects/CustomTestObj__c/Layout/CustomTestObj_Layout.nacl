@@ -1,0 +1,85 @@
+salesforce.Layout CustomTestObj__c_CustomTestObj_Layout@uubs {
+  fullName = "CustomTestObj__c-CustomTestObj Layout"
+  layoutSections = [
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Required"
+              field = salesforce.CustomTestObj__c.field.Name
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CustomTestObj__c.field.newPicklist__c
+            },
+            {
+              behavior = "Edit"
+              field = salesforce.CustomTestObj__c.field.bew_cb__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CustomTestObj__c.field.multi_line__c
+            },
+            {
+              behavior = "Readonly"
+              field = salesforce.CustomTestObj__c.field.second_field__c
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Edit"
+              field = salesforce.CustomTestObj__c.field.OwnerId
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      label = "System Information"
+      layoutColumns = [
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.CustomTestObj__c.field.CreatedById
+            },
+          ]
+        },
+        {
+          layoutItems = [
+            {
+              behavior = "Readonly"
+              field = salesforce.CustomTestObj__c.field.LastModifiedById
+            },
+          ]
+        },
+      ]
+      style = "TwoColumnsTopToBottom"
+    },
+    {
+      customLabel = false
+      detailHeading = false
+      editHeading = true
+      style = "CustomLinks"
+    },
+  ]
+  showEmailCheckbox = false
+  showHighlightsPanel = false
+  showInteractionLogPanel = false
+  showRunAssignmentRulesCheckbox = false
+  showSubmitAndAttachButton = false
+  _parent = [
+    salesforce.CustomTestObj__c,
+  ]
+}

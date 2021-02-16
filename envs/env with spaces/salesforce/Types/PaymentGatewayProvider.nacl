@@ -1,0 +1,49 @@
+type salesforce.PaymentGatewayProvider {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string apexAdapter {
+    _required = false
+    foreignKeyDomain = [
+      salesforce.ApexClass,
+    ]
+  }
+  string comments {
+    _required = false
+  }
+  serviceid fullName {
+    _required = false
+  }
+  string idempotencySupported {
+    _required = false
+    _restriction = {
+      enforce_value = false
+      values = [
+        "No",
+        "Yes",
+      ]
+    }
+  }
+  string masterLabel {
+    _required = false
+  }
+  string internalId {
+    _required = false
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "paymentGatewayProvider"
+  dirName = "paymentGatewayProviders"
+  metadataType = "PaymentGatewayProvider"
+}

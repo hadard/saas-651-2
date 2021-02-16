@@ -1,0 +1,157 @@
+type salesforce.AppProfileActionOverride {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string actionName {
+    _required = false
+  }
+  string content {
+    _required = false
+    foreignKeyDomain = [
+      salesforce.LightningPage,
+    ]
+  }
+  string formFactor {
+    _required = false
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Large",
+        "Medium",
+        "Small",
+      ]
+    }
+  }
+  string pageOrSobjectType {
+    _required = false
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Account",
+        "Address",
+        "AlternativePaymentMethod",
+        "Asset",
+        "AssetAction",
+        "AssetActionSource",
+        "AssetRelationship",
+        "AssetStatePeriod",
+        "AssignedResource",
+        "AssociatedLocation",
+        "Campaign",
+        "CampaignMember",
+        "CardPaymentMethod",
+        "Case",
+        "CollaborationGroup",
+        "CommSubscription",
+        "CommSubscriptionChannelType",
+        "CommSubscriptionConsent",
+        "CommSubscriptionTiming",
+        "Contact",
+        "ContactRequest",
+        "ContentDocument",
+        "Contract",
+        "CustomTest2__c",
+        "CustomTestObj__c",
+        "DigitalWallet",
+        "Employee",
+        "EngagementChannelType",
+        "EnhancedLetterhead",
+        "Event",
+        "Individual",
+        "InternalOrganizationUnit",
+        "Lead",
+        "LegalEntity",
+        "Location",
+        "LocationWaitlist",
+        "MessagingEndUser",
+        "MessagingSession",
+        "Note",
+        "OneMoreObj__c",
+        "OperatingHours",
+        "Opportunity",
+        "OpportunityLineItem",
+        "Order",
+        "OrderItem",
+        "PartyConsent",
+        "Payment",
+        "PaymentAuthAdjustment",
+        "PaymentAuthorization",
+        "PaymentGateway",
+        "PaymentGatewayLog",
+        "PaymentLineInvoice",
+        "Pricebook2",
+        "PricebookEntry",
+        "ProcessException",
+        "ProcessInstanceStep",
+        "ProcessInstanceWorkitem",
+        "Product2",
+        "Refund",
+        "RefundLinePayment",
+        "ResourceAbsence",
+        "ResourcePreference",
+        "ReturnOrder",
+        "ReturnOrderItemAdjustment",
+        "ReturnOrderItemTax",
+        "ReturnOrderLineItem",
+        "Scorecard",
+        "ScorecardAssociation",
+        "ScorecardMetric",
+        "ServiceAppointment",
+        "ServiceResource",
+        "ServiceResourceSkill",
+        "ServiceTerritory",
+        "ServiceTerritoryMember",
+        "SkillRequirement",
+        "SocialPersona",
+        "Task",
+        "TimeSlot",
+        "User",
+        "WorkType",
+        "WorkTypeGroup",
+        "standard-home",
+        "standard-mailapp",
+      ]
+    }
+    foreignKeyDomain = [
+      "CustomObject",
+    ]
+  }
+  string recordType {
+    _required = false
+    foreignKeyDomain = [
+      salesforce.RecordType,
+    ]
+  }
+  string type {
+    _required = false
+    _restriction = {
+      enforce_value = false
+      values = [
+        "Default",
+        "Flexipage",
+        "LightningComponent",
+        "Scontrol",
+        "Standard",
+        "Visualforce",
+      ]
+    }
+  }
+  string profile {
+    _required = false
+    foreignKeyDomain = [
+      "Profile",
+    ]
+  }
+  metadataType = "AppProfileActionOverride"
+}

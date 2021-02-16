@@ -1,0 +1,6 @@
+salesforce.SharingRules OneMoreObj__c {
+  fullName = "OneMoreObj__c"
+  _parent = [
+    salesforce.OneMoreObj__c,
+  ]
+}

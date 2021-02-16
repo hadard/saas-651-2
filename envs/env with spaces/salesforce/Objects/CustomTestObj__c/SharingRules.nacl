@@ -1,0 +1,6 @@
+salesforce.SharingRules CustomTestObj__c {
+  fullName = "CustomTestObj__c"
+  _parent = [
+    salesforce.CustomTestObj__c,
+  ]
+}

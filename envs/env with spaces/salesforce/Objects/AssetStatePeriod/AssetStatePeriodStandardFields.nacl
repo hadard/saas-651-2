@@ -1,0 +1,145 @@
+type salesforce.AssetStatePeriod {
+  serviceid Id {
+    apiName = "AssetStatePeriod.Id"
+    label = "Asset State Period ID"
+    _required = false
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "AssetStatePeriod.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _required = false
+  }
+  salesforce.AutoNumber AssetStatePeriodNumber {
+    apiName = "AssetStatePeriod.AssetStatePeriodNumber"
+    label = "Name"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "AssetStatePeriod.CreatedDate"
+    label = "Created Date"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "AssetStatePeriod.CreatedById"
+    label = "Created By ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "AssetStatePeriod.LastModifiedDate"
+    label = "Last Modified Date"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "AssetStatePeriod.LastModifiedById"
+    label = "Last Modified By ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "AssetStatePeriod.SystemModstamp"
+    label = "System Modstamp"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup AssetId {
+    apiName = "AssetStatePeriod.AssetId"
+    label = "Asset ID"
+    _required = true
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "Asset"
+    queryable = true
+  }
+  salesforce.DateTime StartDate {
+    apiName = "AssetStatePeriod.StartDate"
+    label = "Start Date"
+    _required = true
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.DateTime EndDate {
+    apiName = "AssetStatePeriod.EndDate"
+    label = "End Date"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Number Quantity {
+    apiName = "AssetStatePeriod.Quantity"
+    label = "Quantity"
+    _required = true
+    precision = 14
+    scale = 2
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+  }
+  salesforce.Currency Amount {
+    apiName = "AssetStatePeriod.Amount"
+    label = "Amount"
+    _required = true
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency Mrr {
+    apiName = "AssetStatePeriod.Mrr"
+    label = "Monthly Recurring Revenue"
+    _required = true
+    createable = false
+    updateable = false
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+}

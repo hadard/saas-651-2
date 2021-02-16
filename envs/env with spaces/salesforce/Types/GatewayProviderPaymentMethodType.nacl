@@ -1,0 +1,52 @@
+type salesforce.GatewayProviderPaymentMethodType {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  string comments {
+    _required = false
+  }
+  serviceid fullName {
+    _required = false
+  }
+  string gtwyProviderPaymentMethodType {
+    _required = false
+  }
+  string masterLabel {
+    _required = false
+  }
+  string paymentGatewayProvider {
+    _required = false
+    foreignKeyDomain = [
+      salesforce.PaymentGatewayProvider,
+    ]
+  }
+  string paymentMethodType {
+    _required = false
+    _restriction = {
+      enforce_value = false
+      values = [
+        "CardPaymentMethod",
+        "DigitalWallet",
+      ]
+    }
+  }
+  string internalId {
+    _required = false
+    _hidden_value = true
+    localOnly = true
+  }
+  suffix = "gatewayProviderPaymentMethodType"
+  dirName = "gatewayProviderPaymentMethodTypes"
+  metadataType = "GatewayProviderPaymentMethodType"
+}

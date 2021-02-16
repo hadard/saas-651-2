@@ -1,0 +1,71 @@
+type salesforce.CustomTestObj__c {
+  salesforce.Picklist newPicklist__c {
+    apiName = "CustomTestObj__c.newPicklist__c"
+    label = "newPicklist"
+    _required = false
+    valueSet = [
+      {
+        fullName = "v1"
+        default = false
+        label = "v1"
+      },
+      {
+        fullName = "v2"
+        default = false
+        label = "v2"
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+    sorted = false
+  }
+  salesforce.Checkbox bew_cb__c {
+    apiName = "CustomTestObj__c.bew_cb__c"
+    label = "bew cb"
+    defaultValue = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.FormulaNumber multi_line__c {
+    apiName = "CustomTestObj__c.multi_line__c"
+    label = "multi line"
+    _required = false
+    precision = 18
+    scale = 2
+    formula = '''
+1 +
+177
++666
+* 
+3
+'''
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+  }
+  salesforce.FormulaNumber second_field__c {
+    apiName = "CustomTestObj__c.second_field__c"
+    label = "second field"
+    _required = false
+    precision = 18
+    scale = 2
+    formula = '''
+6 + 4
++ 1
++ 5 + 8
++11
+'''
+    createable = false
+    updateable = false
+    unique = false
+    queryable = true
+    externalId = false
+    formulaTreatBlanksAs = "BlankAsZero"
+  }
+}

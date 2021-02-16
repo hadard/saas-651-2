@@ -1,0 +1,33 @@
+settings salesforce.PartyDataModelSettings {
+  annotations {
+    serviceid metadataType {
+    }
+    boolean hasMetaFile {
+    }
+    string folderType {
+    }
+    string folderContentType {
+    }
+    string suffix {
+    }
+    string dirName {
+    }
+  }
+  serviceid fullName {
+    _required = false
+  }
+  string internalId {
+    _required = false
+    _hidden_value = true
+    localOnly = true
+  }
+  boolean enableAutoSelectIndividualOnMerge {
+  }
+  boolean enableConsentManagementEnabled {
+  }
+  boolean enableIndividualAutoCreate {
+  }
+  suffix = "settings"
+  dirName = "settings"
+  metadataType = "PartyDataModelSettings"
+}

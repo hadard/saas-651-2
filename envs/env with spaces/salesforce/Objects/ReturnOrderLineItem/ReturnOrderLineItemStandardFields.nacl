@@ -1,0 +1,550 @@
+type salesforce.ReturnOrderLineItem {
+  serviceid Id {
+    apiName = "ReturnOrderLineItem.Id"
+    label = "Return Order Line Item ID"
+    _required = false
+    queryable = true
+    _hidden_value = true
+    updateable = false
+    createable = false
+  }
+  salesforce.Checkbox IsDeleted {
+    apiName = "ReturnOrderLineItem.IsDeleted"
+    label = "Deleted"
+    defaultValue = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+    _required = false
+  }
+  salesforce.AutoNumber ReturnOrderLineItemNumber {
+    apiName = "ReturnOrderLineItem.ReturnOrderLineItemNumber"
+    label = "Return Order Line Item Number"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime CreatedDate {
+    apiName = "ReturnOrderLineItem.CreatedDate"
+    label = "Created Date"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup CreatedById {
+    apiName = "ReturnOrderLineItem.CreatedById"
+    label = "Created By ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "CreatedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime LastModifiedDate {
+    apiName = "ReturnOrderLineItem.LastModifiedDate"
+    label = "Last Modified Date"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup LastModifiedById {
+    apiName = "ReturnOrderLineItem.LastModifiedById"
+    label = "Last Modified By ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.User,
+    ]
+    createable = false
+    updateable = false
+    relationshipName = "LastModifiedBy"
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.DateTime SystemModstamp {
+    apiName = "ReturnOrderLineItem.SystemModstamp"
+    label = "System Modstamp"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+    _hidden_value = true
+  }
+  salesforce.Lookup ReturnOrderId {
+    apiName = "ReturnOrderLineItem.ReturnOrderId"
+    label = "Return Order ID"
+    _required = true
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.ReturnOrder,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ReturnOrder"
+    queryable = true
+  }
+  salesforce.Lookup OrderItemId {
+    apiName = "ReturnOrderLineItem.OrderItemId"
+    label = "Order Product ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.OrderItem,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "OrderItem"
+    queryable = true
+  }
+  salesforce.Lookup Product2Id {
+    apiName = "ReturnOrderLineItem.Product2Id"
+    label = "Product ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.Product2,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Product2"
+    queryable = true
+  }
+  salesforce.Number QuantityReturned {
+    apiName = "ReturnOrderLineItem.QuantityReturned"
+    label = "Quantity Returned"
+    _required = true
+    precision = 18
+    scale = 2
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist QuantityUnitOfMeasure {
+    apiName = "ReturnOrderLineItem.QuantityUnitOfMeasure"
+    label = "Quantity Unit Of Measure"
+    _required = false
+    valueSet = [
+      {
+        fullName = "Each"
+        default = false
+        label = "Each"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup SourceLocationId {
+    apiName = "ReturnOrderLineItem.SourceLocationId"
+    label = "Source Location ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.Location,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "SourceLocation"
+    queryable = true
+  }
+  salesforce.Lookup DestinationLocationId {
+    apiName = "ReturnOrderLineItem.DestinationLocationId"
+    label = "Destination Location ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.Location,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "DestinationLocation"
+    queryable = true
+  }
+  salesforce.Lookup AssetId {
+    apiName = "ReturnOrderLineItem.AssetId"
+    label = "Asset ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.Asset,
+    ]
+    createable = true
+    updateable = true
+    relationshipName = "Asset"
+    queryable = true
+  }
+  salesforce.LongTextArea Description {
+    apiName = "ReturnOrderLineItem.Description"
+    label = "Description"
+    _required = false
+    createable = true
+    updateable = true
+    length = 32000
+    queryable = true
+  }
+  salesforce.Picklist ReasonForReturn {
+    apiName = "ReturnOrderLineItem.ReasonForReturn"
+    label = "Reason For Return"
+    _required = false
+    valueSet = [
+      {
+        fullName = "Damaged"
+        default = true
+        label = "Damaged"
+        isActive = true
+      },
+      {
+        fullName = "Defective"
+        default = false
+        label = "Defective"
+        isActive = true
+      },
+      {
+        fullName = "Duplicate Order"
+        default = false
+        label = "Duplicate Order"
+        isActive = true
+      },
+      {
+        fullName = "Wrong Item"
+        default = false
+        label = "Wrong Item"
+        isActive = true
+      },
+      {
+        fullName = "Wrong Quantity"
+        default = false
+        label = "Wrong Quantity"
+        isActive = true
+      },
+      {
+        fullName = "Not Satisfied"
+        default = false
+        label = "Not Satisfied"
+        isActive = true
+      },
+      {
+        fullName = "Outdated"
+        default = false
+        label = "Outdated"
+        isActive = true
+      },
+      {
+        fullName = "Other"
+        default = false
+        label = "Other"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist ProcessingPlan {
+    apiName = "ReturnOrderLineItem.ProcessingPlan"
+    label = "Processing Plan"
+    _required = false
+    valueSet = [
+      {
+        fullName = "Repair"
+        default = true
+        label = "Repair"
+        isActive = true
+      },
+      {
+        fullName = "Discard"
+        default = false
+        label = "Discard"
+        isActive = true
+      },
+      {
+        fullName = "Salvage"
+        default = false
+        label = "Salvage"
+        isActive = true
+      },
+      {
+        fullName = "Restock"
+        default = false
+        label = "Restock"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist RepaymentMethod {
+    apiName = "ReturnOrderLineItem.RepaymentMethod"
+    label = "Repayment Method"
+    _required = false
+    valueSet = [
+      {
+        fullName = "Replace"
+        default = true
+        label = "Replace"
+        isActive = true
+      },
+      {
+        fullName = "Refund"
+        default = false
+        label = "Refund"
+        isActive = true
+      },
+      {
+        fullName = "Credit"
+        default = false
+        label = "Credit"
+        isActive = true
+      },
+      {
+        fullName = "Return"
+        default = false
+        label = "Return"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Lookup ChangeOrderItemId {
+    apiName = "ReturnOrderLineItem.ChangeOrderItemId"
+    label = "Order Product ID"
+    _required = false
+    allowLookupRecordDeletion = true
+    referenceTo = [
+      salesforce.OrderItem,
+    ]
+    createable = true
+    updateable = false
+    relationshipName = "ChangeOrderItem"
+    queryable = true
+  }
+  salesforce.Picklist Type {
+    apiName = "ReturnOrderLineItem.Type"
+    label = "Type"
+    _required = false
+    valueSet = [
+      {
+        fullName = "Order Product"
+        default = false
+        label = "Order Product"
+        isActive = true
+      },
+      {
+        fullName = "Delivery Charge"
+        default = false
+        label = "Delivery Charge"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Picklist TypeCode {
+    apiName = "ReturnOrderLineItem.TypeCode"
+    label = "Type Code"
+    _required = false
+    valueSet = [
+      {
+        fullName = "Product"
+        default = false
+        label = "Product"
+        isActive = true
+      },
+      {
+        fullName = "Charge"
+        default = false
+        label = "Charge"
+        isActive = true
+      },
+    ]
+    restricted = true
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Number QuantityReceived {
+    apiName = "ReturnOrderLineItem.QuantityReceived"
+    label = "Quantity Received"
+    _required = false
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number QuantityExpected {
+    apiName = "ReturnOrderLineItem.QuantityExpected"
+    label = "Quantity Expected"
+    _required = false
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Number QuantityRejected {
+    apiName = "ReturnOrderLineItem.QuantityRejected"
+    label = "Quantity Rejected"
+    _required = false
+    precision = 18
+    scale = 0
+    createable = true
+    updateable = true
+    unique = false
+    queryable = true
+  }
+  salesforce.Picklist ReasonForRejection {
+    apiName = "ReturnOrderLineItem.ReasonForRejection"
+    label = "Reason for Rejection"
+    _required = false
+    valueSet = [
+      {
+        fullName = "Damaged Item"
+        default = false
+        label = "Damaged Item"
+        isActive = true
+      },
+      {
+        fullName = "Missing Item or Part"
+        default = true
+        label = "Missing Item or Part"
+        isActive = true
+      },
+      {
+        fullName = "Wrong Item"
+        default = false
+        label = "Wrong Item"
+        isActive = true
+      },
+      {
+        fullName = "Expired Warranty"
+        default = false
+        label = "Expired Warranty"
+        isActive = true
+      },
+    ]
+    restricted = false
+    createable = true
+    updateable = true
+    queryable = true
+  }
+  salesforce.Currency UnitPrice {
+    apiName = "ReturnOrderLineItem.UnitPrice"
+    label = "Unit Price"
+    _required = false
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency GrossUnitPrice {
+    apiName = "ReturnOrderLineItem.GrossUnitPrice"
+    label = "Gross Unit Price"
+    _required = false
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Currency TotalLineAmount {
+    apiName = "ReturnOrderLineItem.TotalLineAmount"
+    label = "Line Subtotal"
+    _required = false
+    createable = true
+    updateable = true
+    scale = 2
+    precision = 18
+    queryable = true
+  }
+  salesforce.Summary TotalLineTaxAmount {
+    apiName = "ReturnOrderLineItem.TotalLineTaxAmount"
+    label = "Line Subtotal Tax"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Summary TotalAdjustmentTaxAmount {
+    apiName = "ReturnOrderLineItem.TotalAdjustmentTaxAmount"
+    label = "Adjustments Tax"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Summary TotalAdjustmentAmount {
+    apiName = "ReturnOrderLineItem.TotalAdjustmentAmount"
+    label = "Adjustments"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Summary TotalLineAmountWithTax {
+    apiName = "ReturnOrderLineItem.TotalLineAmountWithTax"
+    label = "Line Subtotal with Tax"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Summary TotalAdjustmentAmountWithTax {
+    apiName = "ReturnOrderLineItem.TotalAdjustmentAmountWithTax"
+    label = "Adjustments with Tax"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Summary TotalPrice {
+    apiName = "ReturnOrderLineItem.TotalPrice"
+    label = "Pretax Total"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Summary TotalTaxAmount {
+    apiName = "ReturnOrderLineItem.TotalTaxAmount"
+    label = "Tax"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+  salesforce.Summary TotalAmount {
+    apiName = "ReturnOrderLineItem.TotalAmount"
+    label = "Total with Tax"
+    _required = false
+    createable = false
+    updateable = false
+    queryable = true
+  }
+}
